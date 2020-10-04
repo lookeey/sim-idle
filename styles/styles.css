@@ -59,6 +59,20 @@ a {
 	text-decoration: inherit;
 }
 
+input {
+	background-color: #00000000;
+	border: 1px var(--accent1, white) solid;
+	border-radius: 2px;
+	margin: 4px;
+	color: var(--accent1, white);
+	transition: 300ms all;
+}
+
+input:hover, input:focus {
+	color: var(--accent2, white);
+	outline: none;
+}
+
 #title {
     text-align: center;
     font-weight: 600;
@@ -190,7 +204,45 @@ a {
 }
 
 #options {
+	position: fixed;
 	display: none;
+	height: 300px;
+	width: 420px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.option {
+	overflow: hidden;
+	padding: 0;
+	height: 140px;
+	width: 120px;
+	margin: 5px;
+	font-family: inherit;
+	color: inherit;
+	background-color: #00000000;
+	border: var(--accent1, black) 2px solid;
+	font-size: 13px;
+	vertical-align:bottom;
+	transition: 300ms all;
+}
+
+.option:hover {
+	border: 2px var(--accent2, white) solid;
+	color: var(--accent2, white);
+}
+
+.option:active {
+	opacity: 0.5;
+}
+
+#interval-form {
+	width: 70px;
+}
+
+.option:focus {
+	outline: none;
 }
 
 .column {
