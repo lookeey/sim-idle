@@ -35,7 +35,7 @@ function load(){
 
 function save(){
     localStorage.setItem("catgirlsimsave", JSON.stringify(player));
-    console.log("Game saved.")
+    notify("Game saved.")
 };
 
 function hideTabs() {
