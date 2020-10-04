@@ -1,0 +1,171 @@
+@font-face {
+	font-family: 'Iosevka Term SS08 Web';
+    font-weight: 200;
+    font-style: normal;
+    src: url("../fonts/iosevka-term-ss08-extralight.woff") format("woff")
+}
+@font-face {
+	font-family: 'Iosevka Term SS08 Web';
+    font-weight: 200;
+    font-style: italic;
+    src: url("../fonts/iosevka-term-ss08-extralightitalic.woff") format("woff")
+}
+@font-face {
+	font-family: 'Iosevka Term SS08 Web';
+    font-weight: 400;
+    font-style: normal;
+    src: url("../fonts/iosevka-term-ss08-regular.woff") format("woff")
+}
+@font-face {
+	font-family: 'Iosevka Term SS08 Web';
+    font-weight: 400;
+    font-style: italic;
+    src: url("../fonts/iosevka-term-ss08-italic.woff") format("woff")
+}
+@font-face {
+	font-family: 'Iosevka Term SS08 Web';
+    font-weight: 600;
+    font-style: normal;
+    src: url("../fonts/iosevka-term-ss08-semibold.woff") format("woff")
+}
+@font-face {
+	font-family: 'Iosevka Term SS08 Web';
+    font-weight: 600;
+    font-style: italic;
+    src: url("../fonts/iosevka-term-ss08-semibolditalic.woff") format("woff")
+}
+@font-face {
+	font-family: 'Iosevka Term SS08 Web';
+    font-weight: 800;
+    font-style: normal;
+    src: url("../fonts/iosevka-term-ss08-extrabold.woff") format("woff")
+}
+@font-face {
+	font-family: 'Iosevka Term SS08 Web';
+    font-weight: 800;
+    font-style: italic;
+    src: url("../fonts/iosevka-term-ss08-extrabolditalic.woff") format("woff")
+}
+
+body {
+    background-color: var(--bg-color, black);
+    font-family: 'Iosevka Term SS08 Web', monospace;
+    color: var(--accent1, black);
+    transition: 500ms ease-in-out all;
+}
+
+#title {
+    text-align: center;
+    font-weight: 600;
+}
+
+#amount {
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    text-shadow: 0 0 3px white;
+    font-size: 14pt;
+}
+
+#center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 230px;
+    width: 30%;
+}
+
+#btn-core, #btn-progress{
+		position: absolute;
+    width: 160px;
+    height: 160px;
+    text-align: center;
+    vertical-align: middle;
+    border: 0px;
+    border-radius: 125px;
+    font-size: 26pt;
+    font-weight: bold;
+    padding: 0;
+    font-family: 'Iosevka Term SS08 Web', monospace;
+    transition: 300ms ease-in-out all;
+}
+
+#btn-core {
+		color: var(--bg-color, black);
+		background-color: var(--accent2);
+		box-shadow: 0 0 10px var(--accent2, white);
+}
+
+#btn-progress{
+		pointer-events: none;
+		clip-path: circle(0% at 50% 50%);
+		background-color: var(--accent2, white);
+}
+
+#btn-core:focus, .selector:focus{
+    outline:none;
+}
+
+#btn-core:active, .selector:active{
+    opacity: 80%;
+}
+
+.selector {
+		display: none;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    border: 0px;
+    color: var(--bg-color, black);
+    border: 0px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+#wheat-selector {
+    left: 10%;
+    top: 10%;
+    background-color: rgb(79, 194, 34);
+}
+
+#fish-selector {
+    right: 10%;
+    top: 10%;
+    background-color: rgb(30, 207, 184);
+}
+
+#catsitter-selector {
+    left: 10%;
+    bottom: 10%;
+    background-color: rgb(247, 76, 156);
+}
+
+#science-selector {
+    right: 10%;
+    bottom: 10%;
+    background-color: rgb(84, 86, 214);
+}
+
+.column {
+    width: 33.33%;
+    float: left;
+    height: 96vh;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+div.wheat {
+	padding: 15px 0 0 0;
+}

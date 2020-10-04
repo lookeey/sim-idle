@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <title>The Game</title>
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+    <script defer src="./js/notify.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./js/ui.js"></script>
+    <script defer src="./js/initialize.js"></script>
+    <script defer src="./js/agriculture.js"></script>
+    <script defer src="./js/core.js"></script>
+</head>
+<body>
+    <div id="notifications"></div>
+    <div class="row">
+        <div class="column">
+            <div class="tab Agriculture">
+                <div class=wheat>
+                    <p><i>You have <b class="wheat amount">a lot of</b> Wheat</i></p>
+                </div>
+            </div>
+            <div class="tab Fisherman"></div>
+            <div class="tab Catsitter"></div>
+            <div class="tab Scientist"></div>
+            <div class="tab Catgirl"></div>
+        </div>
+
+        <div class="column">
+            <h1 id="title"></h1>
+            <!--h2 id="amount">You have p l a c e h o l d e r.</h2-->
+            <div id="center">
+                <button id="wheat-selector" class="selector wheat" onclick="changeTab('Agriculture')">🌿&#xFE0E;</button>
+                <button id="fish-selector" class="selector fish" onclick="changeTab('Fisherman')">🐟&#xFE0E;</button>
+                <button id="catsitter-selector" class="selector cat" onclick="changeTab('Catsitter')">🐈&#xFE0E;</button>
+                <button id="science-selector" class="selector catdna" onclick="changeTab('Scientist')">⚛</button>
+                <button id="btn-core" onclick="mainButtonClick()">%</button>
+                <div id="btn-progress"></div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="tab Agriculture"></div>
+            <div class="tab Fisherman"></div>
+            <div class="tab Catsitter"></div>
+            <div class="tab Scientist"></div>
+            <div class="tab Catgirl"></div>
+        </div>
+    </div>
+</body>
