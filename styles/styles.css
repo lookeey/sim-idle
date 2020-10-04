@@ -54,6 +54,11 @@ body {
     transition: 500ms ease-in-out all;
 }
 
+a {
+	color:inherit;
+	text-decoration: inherit;
+}
+
 #title {
     text-align: center;
     font-weight: 600;
@@ -163,12 +168,12 @@ body {
 }
 
 #notifications div {
-	display: inline-block;
+	display: inline;
 }
 
 #notifications div::after, #bottom-bar div::after {
 	content: "  |  ";
-	display: inline-block;
+	display: inline;
 	white-space: pre;
 }
 
@@ -181,7 +186,11 @@ body {
 }
 
 #bottom-bar div {
-	display: inline-block;
+	display: inline;
+}
+
+#options {
+	display: none;
 }
 
 .column {
@@ -193,7 +202,6 @@ body {
 
 .row:after {
     content: "";
-
     clear: both;
 }
 
