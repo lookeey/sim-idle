@@ -49,6 +49,10 @@ function hideTabs() {
         $(`.selector.${currency}`).hide()
     }}
     $(`.selector.wheat`).show()
+    if(player.mainCurrencies.fish == 0){
+        $(`.selector.wheat`).hide()
+
+    }
 }
 
 function setTab(){
