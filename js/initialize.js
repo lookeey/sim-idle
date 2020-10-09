@@ -19,7 +19,7 @@ function createPlayer(){
       extraCurrencies: {
       },
       ticks: {
-        wheat: 3000,
+        wheat: 6000,
       },
       unlocked: {
           wheat_upgrades: false
@@ -48,7 +48,6 @@ function hideTabs() {
   for(var [currency, amount] of entries){
     if(amount > 0){
         $(`.selector.${currency}`).show()
-
     }
     else if(amount < 1){
         $(`.selector.${currency}`).hide()
@@ -56,15 +55,16 @@ function hideTabs() {
     $(`.selector.wheat`).show()
     if(player.mainCurrencies.fish == 0){
         $(`.selector.wheat`).hide()
-
     }
 }
 
 function setTab(){
-    document.getElementById("title").innerHTML = `${player.currentLevel} Simulator`;
-    document.getElementById("btn-core").innerHTML = buttonIcons[player.currentLevel.split(' ')[0].toLowerCase()];
+    $(".tab").hide();
+    $("#title").text(`${player.currentLevel} Simulator`);
+    $("#btn-core").text(buttonIcons[player.currentLevel.split(' ')[0].toLowerCase()]);
     currentTab = player.currentLevel.split(' ')[0];
     triggerCss(currentTab);
+    changeTab(currentTab);
 };
 
 function setAmount(el, amount){

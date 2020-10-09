@@ -47,11 +47,39 @@
     src: url("../fonts/iosevka-term-ss08-extrabolditalic.woff") format("woff")
 }
 
+::selection {
+  color: white;
+  background: #0000;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+	background: #0000;
+	opacity: 0.5;
+}
+
+::-webkit-scrollbar-track {
+  background: #0000;
+	opacity: 0.50;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(var(--accent1), 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--accent1), 0.7);
+}
+
 body {
-    background-color: var(--bg-color, black);
+    background-color: rgb(var(--bg-color));
     font-family: 'Iosevka Term SS08 Web', monospace;
-    color: var(--accent1, black);
+    color: rgb(var(--accent1));
     transition: 500ms ease-in-out all;
+}
+
+.tab {
+	padding: 15px 0 0 0;
 }
 
 a {
@@ -61,17 +89,18 @@ a {
 
 input {
 	background-color: #00000000;
-	border: 1px var(--accent1, white) solid;
+	border: 1px rgb(var(--accent1)) solid;
 	border-radius: 2px;
 	margin: 4px;
-	color: var(--accent1, white);
+	color: rgb(var(--accent1));
 	transition: 300ms all;
 }
 
 input:hover, input:focus {
-	color: var(--accent2, white);
+	color: rgb(var(--accent2));
 	outline: none;
 }
+
 
 #title {
     text-align: center;
@@ -115,15 +144,15 @@ input:hover, input:focus {
 }
 
 #btn-core {
-		color: var(--bg-color, black);
-		background-color: var(--accent2);
-		box-shadow: 0 0 10px var(--accent2, white);
+		color: rgb(var(--bg-color));
+		background-color: rgb(var(--accent2));
+		box-shadow: 0 0 10px rgb(var(--accent2));
 }
 
 #btn-progress{
 		pointer-events: none;
 		clip-path: circle(0% at 50% 50%);
-		background-color: var(--accent2, white);
+		background-color: rgb(var(--accent2));
 }
 
 #btn-core:focus, .selector:focus{
@@ -142,7 +171,7 @@ input:hover, input:focus {
     text-align: center;
     vertical-align: middle;
     border: 0px;
-    color: var(--bg-color, black);
+    color: rgb(var(--bg-color));
     border: 0px;
     border-radius: 15px;
     font-weight: bold;
@@ -213,6 +242,13 @@ input:hover, input:focus {
 	transform: translate(-50%, -50%);
 }
 
+.right-title {
+	text-align: right;
+	font-weight: 600;
+	padding-right: 20px;
+	font-style: italic;
+}
+
 .option {
 	overflow: hidden;
 	padding: 0;
@@ -222,23 +258,19 @@ input:hover, input:focus {
 	font-family: inherit;
 	color: inherit;
 	background-color: #00000000;
-	border: var(--accent1, black) 2px solid;
+	border: rgb(var(--accent1)) 2px solid;
 	font-size: 13px;
 	vertical-align:bottom;
 	transition: 300ms all;
 }
 
 .option:hover {
-	border: 2px var(--accent2, white) solid;
-	color: var(--accent2, white);
+	border: 2px rgb(var(--accent2)) solid;
+	color: rgb(var(--accent2));
 }
 
 .option:active {
 	opacity: 0.5;
-}
-
-#interval-form {
-	width: 70px;
 }
 
 .option:focus {
@@ -251,12 +283,49 @@ input:hover, input:focus {
     height: 96vh;
 }
 
+.upgrades {
+	float: right;
+	display: block;
+	max-height: 350px;
+	right: 10px;
+	overflow-y: scroll;
+	width: 235px;
+}
+
+.upgrade {
+	border-radius: 0;
+	border: none;
+	border-bottom: 1px solid rgba(var(--accent2), 0.1);
+	height: 40px;
+	width: 100%;
+	padding: none;
+	background-color: #0000;
+	text-align: left;
+	font-family: inherit;
+	color:inherit;
+	padding: 0
+}
+
+.upgrade-info {
+	word-break: break-word;
+	float: left;
+	width:180px;
+	left:0;
+}
+
+.upgrade-cost {
+	float: right;
+	width:50px;
+	right: 0;
+	padding-top: 10px;
+}
+
+.upgrade:hover {
+	background-color: rgba(var(--accent2), 0.1);
+}
+
 
 .row:after {
     content: "";
     clear: both;
-}
-
-div.wheat {
-	padding: 15px 0 0 0;
 }
