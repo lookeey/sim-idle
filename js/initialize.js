@@ -1,78 +1,85 @@
-var buttonIcons = {
-    agriculture: "🌿&#xFE0E;",
-    fisherman: "🐟&#xFE0E;",
-    cat: "🐈&#xFE0E;",
-    scientist: "⚛"
-};
-
-function createPlayer(){
-  player = {
-      save: true,
-      currentLevel: "Agriculture",
-      mainCurrencies: {
-          wheat: 0,
-          fish: 0,
-          cat: 0,
-          catdna: 0,
-          humanDna: 0,
-          catgirls: 0,},
-      extraCurrencies: {
-      },
-      ticks: {
-        wheat: 6000,
-      },
-      unlocked: {
-          wheat_upgrades: false
-      },
-      options: {
-        saveSpeed: 15,
-        autosave: true,
-      }
-  }
+// creates player object if it doesn't yet exist
+function createPlayer() {
+    player = {
+        save: true,
+        currentLevel: "Agriculture",
+        mainCurrencies: {
+            wheat: 0,
+            fish: 0,
+            cat: 0,
+            catdna: 0,
+            humanDna: 0,
+            catgirls: 0
+        },
+        extraCurrencies: {},
+        ticks: {
+            wheat: 6000
+        },
+        unlocked: {
+            wheat_upgrades: false
+        },
+        options: {
+            saveSpeed: 15,
+            autosave: true
+        }
+    }
 }
 
-function load(){
-    if (!JSON.parse(localStorage.getItem("catgirlsimsave"))){
+// loads local storage and sets data as a player object
+function load() {
+    if (!JSON.parse(localStorage.getItem("catgirlsimsave"))) {
         createPlayer();
     } else {
-    player = JSON.parse(localStorage.getItem("catgirlsimsave"))};
+        player = JSON.parse(localStorage.getItem("catgirlsimsave"))
+    };
 };
 
-function save(){
+
+// saves player object to local storage
+function save() {
     localStorage.setItem("catgirlsimsave", JSON.stringify(player));
     notify("Game saved.")
 };
 
-function hideTabs() {
-  var entries = Object.entries(player.mainCurrencies);
-  for(var [currency, amount] of entries){
-    if(amount > 0){
-        $(`.selector.${currency}`).show()
+function hideSelectors() {
+
+    // loops through player currencies, hiding all selectors for not obtained currencies
+
+    var entries = Object.entries(player.mainCurrencies);
+    for (var [currency, amount] of entries) {
+        if (amount > 0) {
+            $(`.selector.${currency}`).show()
+        } else if (amount < 1) {
+            $(`.selector.${currency}`).hide()
+        }
     }
-    else if(amount < 1){
-        $(`.selector.${currency}`).hide()
-    }}
     $(`.selector.wheat`).show()
-    if(player.mainCurrencies.fish == 0){
+    if (player.mainCurrencies.fish == 0) {
         $(`.selector.wheat`).hide()
     }
 }
 
-function setTab(){
+function setTab() {
+
+    // hides all tabs
     $(".tab").hide();
-    $("#title").text(`${player.currentLevel} Simulator`);
-    $("#btn-core").text(buttonIcons[player.currentLevel.split(' ')[0].toLowerCase()]);
+
+
+    // changes css accordingly to tab set
     currentTab = player.currentLevel.split(' ')[0];
     triggerCss(currentTab);
     changeTab(currentTab);
 };
 
-function setAmount(el, amount){
+function setAmount(el, amount) {
     $(`.${el} .amount`).text(amount)
 }
 
+// initialize player object and set current tab
 
 load();
-hideTabs();
+hideSelectors();
 setTab();
+
+// needs to set every amount in the html in a for loop
 setAmount("wheat", player.mainCurrencies.wheat);

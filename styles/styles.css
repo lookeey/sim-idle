@@ -1,50 +1,50 @@
 @font-face {
-	font-family: 'Iosevka Term SS08 Web';
-    font-weight: 200;
-    font-style: normal;
-    src: url("../fonts/iosevka-term-ss08-extralight.woff") format("woff")
+  font-family: "Iosevka Term SS08 Web";
+  font-weight: 200;
+  font-style: normal;
+  src: url("../fonts/iosevka-term-ss08-extralight.woff") format("woff");
 }
 @font-face {
-	font-family: 'Iosevka Term SS08 Web';
-    font-weight: 200;
-    font-style: italic;
-    src: url("../fonts/iosevka-term-ss08-extralightitalic.woff") format("woff")
+  font-family: "Iosevka Term SS08 Web";
+  font-weight: 200;
+  font-style: italic;
+  src: url("../fonts/iosevka-term-ss08-extralightitalic.woff") format("woff");
 }
 @font-face {
-	font-family: 'Iosevka Term SS08 Web';
-    font-weight: 400;
-    font-style: normal;
-    src: url("../fonts/iosevka-term-ss08-regular.woff") format("woff")
+  font-family: "Iosevka Term SS08 Web";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/iosevka-term-ss08-regular.woff") format("woff");
 }
 @font-face {
-	font-family: 'Iosevka Term SS08 Web';
-    font-weight: 400;
-    font-style: italic;
-    src: url("../fonts/iosevka-term-ss08-italic.woff") format("woff")
+  font-family: "Iosevka Term SS08 Web";
+  font-weight: 400;
+  font-style: italic;
+  src: url("../fonts/iosevka-term-ss08-italic.woff") format("woff");
 }
 @font-face {
-	font-family: 'Iosevka Term SS08 Web';
-    font-weight: 600;
-    font-style: normal;
-    src: url("../fonts/iosevka-term-ss08-semibold.woff") format("woff")
+  font-family: "Iosevka Term SS08 Web";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/iosevka-term-ss08-semibold.woff") format("woff");
 }
 @font-face {
-	font-family: 'Iosevka Term SS08 Web';
-    font-weight: 600;
-    font-style: italic;
-    src: url("../fonts/iosevka-term-ss08-semibolditalic.woff") format("woff")
+  font-family: "Iosevka Term SS08 Web";
+  font-weight: 600;
+  font-style: italic;
+  src: url("../fonts/iosevka-term-ss08-semibolditalic.woff") format("woff");
 }
 @font-face {
-	font-family: 'Iosevka Term SS08 Web';
-    font-weight: 800;
-    font-style: normal;
-    src: url("../fonts/iosevka-term-ss08-extrabold.woff") format("woff")
+  font-family: "Iosevka Term SS08 Web";
+  font-weight: 800;
+  font-style: normal;
+  src: url("../fonts/iosevka-term-ss08-extrabold.woff") format("woff");
 }
 @font-face {
-	font-family: 'Iosevka Term SS08 Web';
-    font-weight: 800;
-    font-style: italic;
-    src: url("../fonts/iosevka-term-ss08-extrabolditalic.woff") format("woff")
+  font-family: "Iosevka Term SS08 Web";
+  font-weight: 800;
+  font-style: italic;
+  src: url("../fonts/iosevka-term-ss08-extrabolditalic.woff") format("woff");
 }
 
 ::selection {
@@ -54,13 +54,13 @@
 
 ::-webkit-scrollbar {
   width: 5px;
-	background: #0000;
-	opacity: 0.5;
+  background: #0000;
+  opacity: 0.5;
 }
 
 ::-webkit-scrollbar-track {
   background: #0000;
-	opacity: 0.50;
+  opacity: 0.5;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -72,260 +72,263 @@
 }
 
 body {
-    background-color: rgb(var(--bg-color));
-    font-family: 'Iosevka Term SS08 Web', monospace;
-    color: rgb(var(--accent1));
-    transition: 500ms ease-in-out all;
+  background-color: rgb(var(--bg-color));
+  font-family: "Iosevka Term SS08 Web", monospace;
+  color: rgb(var(--accent1));
+  transition: 500ms ease-in-out all;
 }
 
 .tab {
-	padding: 15px 0 0 0;
+  padding: 15px 0 0 0;
 }
 
 a {
-	color:inherit;
-	text-decoration: inherit;
+  color: inherit;
+  text-decoration: inherit;
 }
 
 input {
-	background-color: #00000000;
-	border: 1px rgb(var(--accent1)) solid;
-	border-radius: 2px;
-	margin: 4px;
-	color: rgb(var(--accent1));
-	transition: 300ms all;
+  background-color: #00000000;
+  border: 1px rgb(var(--accent1)) solid;
+  border-radius: 2px;
+  margin: 4px;
+  color: rgb(var(--accent1));
+  transition: 300ms all;
 }
 
-input:hover, input:focus {
-	color: rgb(var(--accent2));
-	outline: none;
+input:hover,
+input:focus {
+  color: rgb(var(--accent2));
+  outline: none;
 }
-
 
 #title {
-    text-align: center;
-    font-weight: 600;
+  text-align: center;
+  font-weight: 600;
 }
 
 #amount {
-    color: white;
-    text-align: center;
-    font-weight: 400;
-    text-shadow: 0 0 3px white;
-    font-size: 14pt;
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  text-shadow: 0 0 3px white;
+  font-size: 14pt;
 }
 
 #center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 230px;
-    width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 230px;
+  width: 30%;
 }
 
-#btn-core, #btn-progress{
-		position: absolute;
-    width: 160px;
-    height: 160px;
-    text-align: center;
-    vertical-align: middle;
-    border: 0px;
-    border-radius: 125px;
-    font-size: 26pt;
-    font-weight: bold;
-    padding: 0;
-    font-family: 'Iosevka Term SS08 Web', monospace;
-    transition: 300ms ease-in-out all;
+#btn-core,
+#btn-progress {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  text-align: center;
+  vertical-align: middle;
+  border: 0px;
+  border-radius: 125px;
+  font-size: 26pt;
+  font-weight: bold;
+  padding: 0;
+  font-family: "Iosevka Term SS08 Web", monospace;
+  transition: 300ms ease-in-out all;
 }
 
 #btn-core {
-		color: rgb(var(--bg-color));
-		background-color: rgb(var(--accent2));
-		box-shadow: 0 0 10px rgb(var(--accent2));
+  color: rgb(var(--bg-color));
+  background-color: rgb(var(--accent2));
+  box-shadow: 0 0 10px rgb(var(--accent2));
 }
 
-#btn-progress{
-		pointer-events: none;
-		clip-path: circle(0% at 50% 50%);
-		background-color: rgb(var(--accent2));
+#btn-progress {
+  pointer-events: none;
+  clip-path: circle(0% at 50% 50%);
+  background-color: rgb(var(--accent2));
 }
 
-#btn-core:focus, .selector:focus{
-    outline:none;
+#btn-core:focus,
+.selector:focus {
+  outline: none;
 }
 
-#btn-core:active, .selector:active{
-    opacity: 80%;
+#btn-core:active,
+.selector:active {
+  opacity: 80%;
 }
 
 .selector {
-		display: none;
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    vertical-align: middle;
-    border: 0px;
-    color: rgb(var(--bg-color));
-    border: 0px;
-    border-radius: 15px;
-    font-weight: bold;
+  display: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  border: 0px;
+  color: rgb(var(--bg-color));
+  border: 0px;
+  border-radius: 15px;
+  font-weight: bold;
 }
 
 #wheat-selector {
-    left: 10%;
-    top: 10%;
-    background-color: rgb(79, 194, 34);
+  left: 10%;
+  top: 10%;
+  background-color: rgb(79, 194, 34);
 }
 
 #fish-selector {
-    right: 10%;
-    top: 10%;
-    background-color: rgb(30, 207, 184);
+  right: 10%;
+  top: 10%;
+  background-color: rgb(30, 207, 184);
 }
 
 #catsitter-selector {
-    left: 10%;
-    bottom: 10%;
-    background-color: rgb(247, 76, 156);
+  left: 10%;
+  bottom: 10%;
+  background-color: rgb(247, 76, 156);
 }
 
 #science-selector {
-    right: 10%;
-    bottom: 10%;
-    background-color: rgb(84, 86, 214);
+  right: 10%;
+  bottom: 10%;
+  background-color: rgb(84, 86, 214);
 }
 
 #notifications {
-		position: fixed;
-		width: 100%;
-		height: 37px;
-		bottom: 45px;
-		padding: 3px;
-		overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 37px;
+  bottom: 45px;
+  padding: 3px;
+  overflow: hidden;
 }
 
 #notifications div {
-	display: inline;
+  display: inline;
 }
 
-#notifications div::after, #bottom-bar div::after {
-	content: "  |  ";
-	display: inline;
-	white-space: pre;
+#notifications div::after,
+#bottom-bar div::after {
+  content: "  |  ";
+  display: inline;
+  white-space: pre;
 }
 
 #bottom-bar {
-		position: fixed;
-		width: 100%;
-		height: 27px;
-		padding: 3px;
-		bottom: 10px;
+  position: fixed;
+  width: 100%;
+  height: 27px;
+  padding: 3px;
+  bottom: 10px;
 }
 
 #bottom-bar div {
-	display: inline;
+  display: inline;
 }
 
 #options {
-	position: fixed;
-	display: none;
-	height: 300px;
-	width: 420px;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+  position: fixed;
+  display: none;
+  height: 300px;
+  width: 420px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .right-title {
-	text-align: right;
-	font-weight: 600;
-	padding-right: 20px;
-	font-style: italic;
+  text-align: right;
+  font-weight: 600;
+  padding-right: 20px;
+  font-style: italic;
 }
 
 .option {
-	overflow: hidden;
-	padding: 0;
-	height: 140px;
-	width: 120px;
-	margin: 5px;
-	font-family: inherit;
-	color: inherit;
-	background-color: #00000000;
-	border: rgb(var(--accent1)) 2px solid;
-	font-size: 13px;
-	vertical-align:bottom;
-	transition: 300ms all;
+  overflow: hidden;
+  padding: 0;
+  height: 140px;
+  width: 120px;
+  margin: 5px;
+  font-family: inherit;
+  color: inherit;
+  background-color: #00000000;
+  border: rgb(var(--accent1)) 2px solid;
+  font-size: 13px;
+  vertical-align: bottom;
+  transition: 300ms all;
 }
 
 .option:hover {
-	border: 2px rgb(var(--accent2)) solid;
-	color: rgb(var(--accent2));
+  border: 2px rgb(var(--accent2)) solid;
+  color: rgb(var(--accent2));
 }
 
 .option:active {
-	opacity: 0.5;
+  opacity: 0.5;
 }
 
 .option:focus {
-	outline: none;
+  outline: none;
 }
 
 .column {
-    width: 33.33%;
-    float: left;
-    height: 96vh;
+  width: 33.33%;
+  float: left;
+  height: 96vh;
 }
 
 .upgrades {
-	float: right;
-	display: block;
-	max-height: 350px;
-	right: 10px;
-	overflow-y: scroll;
-	width: 235px;
+  float: right;
+  display: block;
+  max-height: 350px;
+  right: 10px;
+  overflow-y: scroll;
+  width: 235px;
 }
 
 .upgrade {
-	border-radius: 0;
-	border: none;
-	border-bottom: 1px solid rgba(var(--accent2), 0.1);
-	height: 40px;
-	width: 100%;
-	padding: none;
-	background-color: #0000;
-	text-align: left;
-	font-family: inherit;
-	color:inherit;
-	padding: 0
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid rgba(var(--accent2), 0.1);
+  height: 40px;
+  width: 100%;
+  padding: none;
+  background-color: #0000;
+  text-align: left;
+  font-family: inherit;
+  color: inherit;
+  padding: 0;
 }
 
 .upgrade-info {
-	word-break: break-word;
-	float: left;
-	width:180px;
-	left:0;
+  word-break: break-word;
+  float: left;
+  width: 180px;
+  left: 0;
 }
 
 .upgrade-cost {
-	float: right;
-	width:50px;
-	right: 0;
-	padding-top: 10px;
+  float: right;
+  width: 50px;
+  right: 0;
+  padding-top: 10px;
 }
 
 .upgrade:hover {
-	background-color: rgba(var(--accent2), 0.1);
+  background-color: rgba(var(--accent2), 0.1);
 }
 
-
 .row:after {
-    content: "";
-    clear: both;
+  content: "";
+  clear: both;
 }

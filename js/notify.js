@@ -1,3 +1,4 @@
+// adds notification to bottom div
 function notify(text){
 	$('#notifications').prepend(`<div class="notification">${text}</div>`)
 	let divs = $(".notification")
