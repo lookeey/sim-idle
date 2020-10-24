@@ -29,3 +29,26 @@ function changeTab(tab) {
     $("title").text(`${tab} Simulator`);
 
 };
+
+function hideSelectors() { // loops through player currencies, hiding all selectors for not obtained currencies
+
+    var entries = Object.entries(player.mainCurrencies);
+    for (var [currency, amount] of entries) {
+        if (amount > 0) {
+            $(`.selector.${currency}`).show()
+        } else if (amount < 1) {
+            $(`.selector.${currency}`).hide()
+        }
+    }
+    $(`.selector.wheat`).show()
+    if (player.mainCurrencies.fish == 0) {
+        $(`.selector.wheat`).hide()
+    }
+}
+
+function setTab() {
+    // changes css accordingly to player's current level (which is not defined by the game yet)
+    currentTab = player.currentLevel.split(' ')[0];
+    triggerCss(currentTab);
+    changeTab(currentTab);
+};

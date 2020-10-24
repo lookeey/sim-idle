@@ -14,3 +14,5 @@ function wheat() {
         $('.btn-core.Agriculture').prop('disabled', false)
     }, player.ticks.wheat)
 }
+
+

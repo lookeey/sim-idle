@@ -5,91 +5,107 @@
   <link rel="stylesheet" type="text/css" href="./styles/styles.css">
   <script defer src="./js/notify.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+  window.addEventListener('load', function() {
+    setTimeout(function(){
+      $("#loading-screen").fadeOut();
+      $("#game-wrapper").fadeIn();
+  }, 500)
+    
+  })
+  </script>
   <script defer src="./js/ui.js"></script>
+  <script defer src="./js/core.js"></script>
   <script defer src="./js/update.js"> </script>
   <script defer src="./js/initialize.js"></script>
   <script defer src="./js/agriculture.js"></script>
-  <script defer src="./js/core.js"></script>
-
+  <script defer src="./js/options.js"></script>
 </head>
 
 <body>
-  <div id="content">
-    <div class="row">
-      <div class="column">
-        <div class="tab Agriculture">
-          <div class="wheat">
-            <p><i>You have <b class="wheat amount">a lot of</b> Wheat</i></p>
+
+  <div id="loading-screen">
+    <span><i><b>Loading...</b></i></span>
+  </div>
+
+  <div id="game-wrapper">
+    <div id="content">
+      <div class="row">
+        <div class="column">
+          <div class="tab Agriculture">
+            <div class="wheat">
+              <p><i>You have <b class="wheat amount">a lot of</b> Wheat</i></p>
+            </div>
+          </div>
+          <div class="tab Fisherman">
+            <div class="fish">
+              <p><i>You have <b class="fish amount">a lot of</b> Fish</i></p>
+            </div>
+          </div>
+          <div class="tab Catsitter"></div>
+          <div class="tab Scientist"></div>
+          <div class="tab Catgirl"></div>
+        </div>
+
+        <div class="column">
+          <h1 id="title"></h1>
+          <!--h2 id="amount">You have p l a c e h o l d e r.</h2-->
+          <div id="center">
+            <button id="wheat-selector" class="selector wheat" onclick="changeTab('Agriculture')">🌿&#xFE0E;</button>
+            <button id="fish-selector" class="selector fish" onclick="changeTab('Fisherman')">🐟&#xFE0E;</button>
+            <button id="catsitter-selector" class="selector cat" onclick="changeTab('Catsitter')">🐈&#xFE0E;</button>
+            <button id="science-selector" class="selector catdna" onclick="changeTab('Scientist')">⚛</button>
+            
+            <button class="btn-core Agriculture" onclick="wheat()">🌿&#xFE0E;</button>
+            <div class="btn-progress Agriculture"></div>
+
+            <button class="btn-core Fisherman" onclick="fish()">🐟&#xFE0E;</button>
+            <div class="btn-progress Fisherman"></div>
+
+            <button class="btn-core Catsitter" onclick="cat()">🐈&#xFE0E;</button>
+            <div class="btn-progress Catsitter"></div>
+
+            <button class="btn-core Scientist" onclick="dna()">⚛</button>
+            <div class="btn-progress Scientist"></div>
           </div>
         </div>
-        <div class="tab Fisherman">
-          <div class="fish">
-            <p><i>You have <b class="fish amount">a lot of</b> Fish</i></p>
+        <div class="column">
+          <div class="tab Agriculture">
+            <h2 class="right-title">Upgrades</h2>
+            <div class="wheat upgrades">
+              <button class="wheat upgrade">
+                <div class="upgrade-info">Add calm piano music for wheat well being (doesnt work)</div>
+                <div class="upgrade-cost">$45.00</div>
+              </button>
+            </div>
           </div>
+          <div class="tab Fisherman"></div>
+          <div class="tab Catsitter"></div>
+          <div class="tab Scientist"></div>
+          <div class="tab Catgirl"></div>
         </div>
-        <div class="tab Catsitter"></div>
-        <div class="tab Scientist"></div>
-        <div class="tab Catgirl"></div>
-      </div>
-
-      <div class="column">
-        <h1 id="title"></h1>
-        <!--h2 id="amount">You have p l a c e h o l d e r.</h2-->
-        <div id="center">
-          <button id="wheat-selector" class="selector wheat" onclick="changeTab('Agriculture')">🌿&#xFE0E;</button>
-          <button id="fish-selector" class="selector fish" onclick="changeTab('Fisherman')">🐟&#xFE0E;</button>
-          <button id="catsitter-selector" class="selector cat" onclick="changeTab('Catsitter')">🐈&#xFE0E;</button>
-          <button id="science-selector" class="selector catdna" onclick="changeTab('Scientist')">⚛</button>
-          
-          <button class="btn-core Agriculture" onclick="wheat()">🌿&#xFE0E;</button>
-          <div class="btn-progress Agriculture"></div>
-
-          <button class="btn-core Fisherman" onclick="fish()">🐟&#xFE0E;</button>
-          <div class="btn-progress Fisherman"></div>
-
-          <button class="btn-core Catsitter" onclick="cat()">🐈&#xFE0E;</button>
-          <div class="btn-progress Catsitter"></div>
-
-          <button class="btn-core Scientist" onclick="dna()">⚛</button>
-          <div class="btn-progress Scientist"></div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="tab Agriculture">
-          <h2 class="right-title">Upgrades</h2>
-          <div class="wheat upgrades">
-            <button class="wheat upgrade">
-              <div class="upgrade-info">Add calm piano music for wheat well being (doesnt work)</div>
-              <div class="upgrade-cost">$45.00</div>
-            </button>
-          </div>
-        </div>
-        <div class="tab Fisherman"></div>
-        <div class="tab Catsitter"></div>
-        <div class="tab Scientist"></div>
-        <div class="tab Catgirl"></div>
       </div>
     </div>
+    <div id="bottom-bar">
+      <div id="options-btn" onclick="toggleOptions()">Options</div>
+      <div><a href="https://discord.gg/7q5YAhU">Discord</a></div>
+      <div><a href="https://www.latlmes.com/breaking/jackie-chan-found-dead-1">how</a></div>
+      <div><a href="https://github.com/lookeey/sim-idle/">GitHub</a></div>
+    </div>
+    <div id="notifications"></div>
+    </div>
+    <div id="options">
+      <button class="option" onClick="save()">Save</button>
+      <button class="option" onClick="imp()">Import</button>
+      <button class="option" onClick="exp()">Export</button>
+      <button class="option" onClick="resetSave()">Reset</button>
+      <button class="option" onClick="autosave()">Autosave: <b id=autosave></b></button>
+      <button class="option">Save Interval:</br>
+        Current: <b id="current-interval"></b>s</br>
+        <input id="interval" type="number" min="15" max="1200" value="15">
+        <input type="button" onclick="setAutosaveInterval()" value="Set">
+      </button>
+      </br>
+    </div>
   </div>
-  <div id="bottom-bar">
-    <div id="options-btn" onclick="toggleOptions()">Options</div>
-    <div><a href="https://discord.gg/7q5YAhU">Discord</a></div>
-    <div><a href="https://www.latlmes.com/breaking/jackie-chan-found-dead-1">how</a></div>
-    <div><a href="https://github.com/lookeey/sim-idle/">GitHub</a></div>
-  </div>
-  <div id="notifications"></div>
-  </div>
-  <div id="options">
-    <button class="option" onClick="save()">Save</button>
-    <button class="option" onClick="imp()">Import</button>
-    <button class="option" onClick="exp()">Export</button>
-    <button class="option" onClick="resetSave()">Reset</button>
-    <button class="option" onClick="autosave()">Autosave: <b id=autosave></b></button>
-    <button class="option">Save Interval:</br>
-      Current: <b id="current-interval"></b>s</br>
-      <input id="interval" type="number" min="15" max="1200" value="15">
-      <input type="button" onclick="setAutosaveInterval()" value="Set">
-    </button>
-    </br>
-
 </body>
