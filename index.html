@@ -6,9 +6,11 @@
   <script defer src="./js/notify.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./js/ui.js"></script>
+  <script defer src="./js/update.js"> </script>
   <script defer src="./js/initialize.js"></script>
   <script defer src="./js/agriculture.js"></script>
   <script defer src="./js/core.js"></script>
+
 </head>
 
 <body>
@@ -38,8 +40,18 @@
           <button id="fish-selector" class="selector fish" onclick="changeTab('Fisherman')">🐟&#xFE0E;</button>
           <button id="catsitter-selector" class="selector cat" onclick="changeTab('Catsitter')">🐈&#xFE0E;</button>
           <button id="science-selector" class="selector catdna" onclick="changeTab('Scientist')">⚛</button>
-          <button id="btn-core" onclick="mainButtonClick()">%</button>
-          <div id="btn-progress"></div>
+          
+          <button class="btn-core Agriculture" onclick="wheat()">🌿&#xFE0E;</button>
+          <div class="btn-progress Agriculture"></div>
+
+          <button class="btn-core Fisherman" onclick="fish()">🐟&#xFE0E;</button>
+          <div class="btn-progress Fisherman"></div>
+
+          <button class="btn-core Catsitter" onclick="cat()">🐈&#xFE0E;</button>
+          <div class="btn-progress Catsitter"></div>
+
+          <button class="btn-core Scientist" onclick="dna()">⚛</button>
+          <div class="btn-progress Scientist"></div>
         </div>
       </div>
       <div class="column">
@@ -60,7 +72,7 @@
     </div>
   </div>
   <div id="bottom-bar">
-    <div onClick="toggleOptions()">Options</div>
+    <div id="options-btn" onclick="toggleOptions()">Options</div>
     <div><a href="https://discord.gg/7q5YAhU">Discord</a></div>
     <div><a href="https://www.latlmes.com/breaking/jackie-chan-found-dead-1">how</a></div>
     <div><a href="https://github.com/lookeey/sim-idle/">GitHub</a></div>

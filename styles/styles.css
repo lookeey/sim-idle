@@ -80,6 +80,7 @@ body {
 
 .tab {
   padding: 15px 0 0 0;
+  display: none;
 }
 
 a {
@@ -125,11 +126,11 @@ input:focus {
   left: 50%;
   transform: translate(-50%, -50%);
   height: 230px;
-  width: 30%;
+  width: 240px;
 }
 
-#btn-core,
-#btn-progress {
+.btn-core,
+.btn-progress {
   position: absolute;
   width: 160px;
   height: 160px;
@@ -144,24 +145,26 @@ input:focus {
   transition: 300ms ease-in-out all;
 }
 
-#btn-core {
+.btn-core {
   color: rgb(var(--bg-color));
   background-color: rgb(var(--accent2));
   box-shadow: 0 0 10px rgb(var(--accent2));
+  display: none;
 }
 
-#btn-progress {
+.btn-progress {
   pointer-events: none;
   clip-path: circle(0% at 50% 50%);
   background-color: rgb(var(--accent2));
+  display: none;
 }
 
-#btn-core:focus,
+.btn-core:focus,
 .selector:focus {
   outline: none;
 }
 
-#btn-core:active,
+.btn-core:active,
 .selector:active {
   opacity: 80%;
 }

@@ -1,4 +1,3 @@
-
 // displays current save interval in options
 $("#current-interval").text(player.options.saveSpeed.toString())
 
@@ -10,19 +9,6 @@ if (player.options.autosave) {
     $("#autosave").text("OFF")
 }
 
-// returns the function to be executed after the core button is clicked
-function mainButtonClick() {
-    switch (currentTab) {
-        case "Agriculture":
-            return wheat();
-        case "Fisherman":
-            return fish();
-        case "Catsitter":
-            return catDna();
-        case "Scientist":
-            return humanDna();
-    };
-}
 
 // toggles view between options and game
 function toggleOptions() {
@@ -32,9 +18,9 @@ function toggleOptions() {
 
 // starts autosave
 function setAutosave() {
-  autosaveInterval = setInterval(() => {
-      save()
-  }, player.options.saveSpeed * 1000)
+    autosaveInterval = setInterval(() => {
+        save()
+    }, player.options.saveSpeed * 1000)
 }
 
 // toggles autosave between true and false and updates it in options screen
@@ -86,8 +72,9 @@ function imp() {
         } else 
             alert("Your save is invalid.")
 
-    } catch {alert("Your save is invalid.")}}
+        
 
+    } catch {alert("Your save is invalid.")}}
 
 
 // saves the game before the player closes or restarts the page

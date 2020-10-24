@@ -41,9 +41,7 @@ function save() {
     notify("Game saved.")
 };
 
-function hideSelectors() {
-
-    // loops through player currencies, hiding all selectors for not obtained currencies
+function hideSelectors() { // loops through player currencies, hiding all selectors for not obtained currencies
 
     var entries = Object.entries(player.mainCurrencies);
     for (var [currency, amount] of entries) {
@@ -60,12 +58,7 @@ function hideSelectors() {
 }
 
 function setTab() {
-
-    // hides all tabs
-    $(".tab").hide();
-
-
-    // changes css accordingly to tab set
+    // changes css accordingly to player's current level (which is not defined by the game yet)
     currentTab = player.currentLevel.split(' ')[0];
     triggerCss(currentTab);
     changeTab(currentTab);
@@ -75,11 +68,25 @@ function setAmount(el, amount) {
     $(`.${el} .amount`).text(amount)
 }
 
+function gameLoop() {
+    setTimeout(function(){
+        update();
+        gameLoop();
+    }, [1000/30])
+}
+
+// adds event listeners to interactable elements and calls the game loop
+function initGame() {
+
+    gameLoop();
+}
+
 // initialize player object and set current tab
 
 load();
 hideSelectors();
 setTab();
+initGame();
 
 // needs to set every amount in the html in a for loop
 setAmount("wheat", player.mainCurrencies.wheat);
